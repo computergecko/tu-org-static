@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/echo "Simple static site; no extra deployment steps."
