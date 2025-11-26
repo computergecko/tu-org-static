@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/echo "Simple static site; no extra deployment steps."
+    - /bin/echo "Deploying TU.org static site – no extra steps needed."
