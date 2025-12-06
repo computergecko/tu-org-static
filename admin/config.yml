@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/tu-org-static
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+
+  # --------------- PAGES ---------------
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    editor:
+      preview: false
+    files:
+
+      # Home Page
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # M2L Page
+      - label: "M2L – Ministry to the Lord"
+        name: "m2l"
+        file: "1.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # M4L Page
+      - label: "M4L – Ministry for the Lord"
+        name: "m4l"
+        file: "2.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # Exponential Reproduction Page
+      - label: "Exponential Reproduction"
+        name: "exp"
+        file: "3.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # Statement of Faith Page
+      - label: "Statement of Faith"
+        name: "faith"
+        file: "4.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
