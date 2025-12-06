@@ -1,0 +1,14 @@
+What is in the Zip file
+
+Folders:
+ - js
+ - lang
+ 
+ Files:
+  - 1.html
+  - 2.html
+  - 3.html
+  - 4.html
+  - index.html
+  - styles.css
+  - whatisinzipfile.txt (this file)
