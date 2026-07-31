@@ -40,7 +40,7 @@ collections:
           - { label: "HTML Content", name: "body", widget: "code", language: "html" }
 
       # Exponential Reproduction Page
-      - label: "Exponential Reproduction"
+      - label: "Exponential Reproduction (Disciple-Through)"
         name: "exp"
         file: "3.html"
         fields:
@@ -52,3 +52,36 @@ collections:
         file: "4.html"
         fields:
           - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # The General Commands of Jesus
+      - label: "The General Commands of Jesus"
+        name: "commands"
+        file: "commands.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+      # Wisdom, Safety & Privacy
+      - label: "Wisdom, Safety & Privacy"
+        name: "wisdom"
+        file: "wisdom.html"
+        fields:
+          - { label: "HTML Content", name: "body", widget: "code", language: "html" }
+
+  # --------------- TRANSLATIONS ---------------
+  - name: "translations"
+    label: "Translations"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "English (en.json)"
+        name: "en"
+        file: "lang/en.json"
+        fields:
+          - { label: "JSON", name: "body", widget: "code", language: "json" }
+
+      - label: "Hindi (hi.json)"
+        name: "hi"
+        file: "lang/hi.json"
+        fields:
+          - { label: "JSON", name: "body", widget: "code", language: "json" }

@@ -1,0 +1,14 @@
+# This repository is PUBLIC and its contents are served directly as the website
+# (cPanel deploys the checkout; the GitHub Pages / Netlify / Cloudflare / Vercel
+# mirrors serve the repo root). Anything committed here is publicly fetchable at
+# tsunamiunleashed.org/<filename>. Keep internal notes out.
+
+# Internal working notes and content drafts — not for publication
+TODO.md
+org-update-claude-code-tasks.md
+general-commands-of-jesus.md
+disciple-through-and-designed-loss.md
+wisdom-safety-privacy.md
+
+# Agent/tooling scratch
+.gstack/

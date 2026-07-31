@@ -5,10 +5,37 @@
   "brand.tagline": "From His presence to the nations",
   "nav.home": "Home",
   "nav.frameworks": "Frameworks",
+  "nav.commands": "The Commands",
   "nav.roles": "Ways to Walk in This",
   "nav.eternal_life": "Eternal Life",
+  "nav.faith": "Statement of Faith",
   "nav.resilience": "Mirrors & Offline",
   "nav.contact": "Secure Contact",
   "hero.tag.primary": "A quiet, global move of God",
-  "hero.tag.secondary": "Loving Him \u2192 Obeying Him \u2192 Generations of disciples"
+  "hero.tag.secondary": "Loving Him → Obeying Him → Generations of disciples",
+
+  "commands.teaser.link": "The General Commands of Jesus →",
+  "commands.teaser.note": "Eight simple commands we seek to obey and help others obey — plain enough that anyone can learn them, keep them in memory, and pass them on.",
+
+  "wisdom.teaser.link": "Wisdom, Safety & Privacy →",
+  "wisdom.teaser.note": "Before you reach out: we keep no lists of people, share only what is wise, and know and honor the laws where you are. Please read this first.",
+
+  "bridge.com_link": "Looking for the actual teaching to use and share? →",
+  "bridge.com_note": "The materials themselves live on a separate, simple static site, so they can keep being copied, mirrored, and translated even if this one is unavailable.",
+  "bridge.wisdom_link": "Wisdom, Safety & Privacy →",
+
+  "resilience.wisdom": "If you are in a place where following Jesus is costly, please read this before saving, sharing, or hosting copies:",
+
+  "fits.heading": "How This All Fits Together",
+  "fits.intro": "You may come across more than one address for this work. They are not competing sites; each simply carries a different part.",
+  "fits.org": "this site: the heart and the “why.” Why loving Him comes first, and what the Lord seems to be doing.",
+  "fits.com": "the materials to use and share: the actual teaching, in a form you can take, translate, and pass on.",
+  "fits.7gc": "short links to resources: the updated version, the translation template, and more.",
+  "fits.outro": "Everything on all three is released freely, under CC0, so it can be copied, mirrored, and translated without asking anyone’s permission.",
+
+  "footer.com_link": "Looking for the teaching to use and share? →",
+  "footer.commands_link": "The General Commands of Jesus",
+  "footer.wisdom_link": "Wisdom, Safety & Privacy",
+  "footer.fits_link": "How this all fits together",
+  "footer.scripture_note": "Scripture quotations are from the World English Bible (WEB), which is in the public domain."
 }
