@@ -1,0 +1,21 @@
+# tsunamiunleashed.org (cPanel, Apache): cache rules for the shared build
+# (tu-distro site-build; PUBLISH-SPEC-UPDATE-1.md, "Served-time checks").
+#
+#   /assets/   content-hashed stylesheets and scripts; a changed file gets a
+#              new name, so these are immutable. Empty until the site moves
+#              onto the shared build.
+#   /sw.js     a site-root service worker keeps its URL; never stale.
+#   pages and feeds: no-cache, revalidated on every visit.
+#   everything else: the host's defaults.
+
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} =~ m#^/assets/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  <ElseIf "%{REQUEST_URI} == '/sw.js'">
+    Header set Cache-Control "no-cache"
+  </ElseIf>
+  <ElseIf "%{REQUEST_URI} =~ m#(/|\.html|\.xml)$#">
+    Header set Cache-Control "no-cache"
+  </ElseIf>
+</IfModule>
