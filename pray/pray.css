@@ -1,0 +1,38 @@
+/* /pray sign-up and the pages the sign-up Worker answers with. */
+.visually-hidden, .pray-hp {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.pray-form { display: grid; gap: 1.4rem; }
+.pray-options { border: 0; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.pray-option {
+  display: grid; grid-template-columns: auto 1fr; gap: .9rem; align-items: start;
+  background: var(--deep-2); border: 1px solid var(--tide); border-radius: 12px;
+  padding: 1.1rem 1.2rem; cursor: pointer; scroll-margin-top: 1.5rem;
+  transition: border-color .25s var(--ease);
+}
+.pray-option:hover, .pray-option:focus-within { border-color: var(--current-dim); }
+.pray-option:target { border-color: var(--dawn); }
+.pray-option:has(input:checked) { border-color: var(--current); }
+.pray-option .card-title { margin: 0 .5rem .2rem 0; display: inline-block; }
+.pray-option .card-label { display: inline-block; margin: 0; }
+.pray-option-text { display: block; font-size: .96rem; line-height: 1.6; color: var(--text); }
+.pray-soon { display: block; margin-top: .45rem; font-size: .9rem; color: var(--haze); }
+.pray-form input[type="checkbox"] {
+  width: 1.15rem; height: 1.15rem; margin: .3rem 0 0; accent-color: var(--dawn);
+}
+.pray-field { display: grid; gap: .35rem; max-width: 28rem; }
+.pray-field label { color: var(--foam); font-weight: 400; }
+.pray-optional { color: var(--haze); font-size: .9rem; }
+.pray-field input {
+  font: inherit; color: var(--foam); background: var(--abyss);
+  border: 1px solid var(--tide); border-radius: 6px; padding: .65rem .8rem;
+}
+.pray-field input:focus { outline: 2px solid var(--current); outline-offset: 1px; }
+.pray-check { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; color: var(--foam); cursor: pointer; }
+.pray-help { margin: .35rem 0 0 1.85rem; font-size: .9rem; line-height: 1.6; color: var(--haze); max-width: 60ch; }
+.pray-error {
+  margin: 0; padding: .8rem 1rem; border-radius: 8px;
+  border: 1px solid var(--dawn); color: var(--dawn-soft); background: rgba(242, 184, 99, .08);
+}
+.pray-actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pray with us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Prayer emails from Tsunami Unleashed: general prayer updates, the weekly Ganges Pulse, and news of each new prayer guide. Worship first, then pray with understanding."
+  />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="pray.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-title-wrap">
+          <div class="nav-title">A Tsunami of Disciples</div>
+          <div class="nav-subtitle">From His presence to the nations</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="../index.html#top">Home</a>
+        <a href="../index.html#frameworks">Frameworks</a>
+        <a href="../commands.html">The Commands</a>
+        <a href="../index.html#roles">Ways to Walk in This</a>
+        <a href="../index.html#eternal-life">Eternal Life</a>
+        <a href="../4.html">Statement of Faith</a>
+        <a href="../index.html#resilience">Mirrors &amp; Offline</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn-ghost" href="../index.html#contact">Secure Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-shell">
+    <main class="inner">
+
+      <section class="section-block">
+        <h1 class="page-heading">Pray with us</h1>
+        <p class="section-intro">
+          Prayer starts with worship. Before we ask God for anything, we come to know Him and love Him.
+          Then we carry the people He loves to Him.
+        </p>
+        <p class="section-intro" style="margin-top:0.85rem;">
+          That is what these emails are for. Choose what you would like to receive, and we will send it to
+          your inbox. Each one is a short guide to help you worship first, then pray with understanding.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <!-- Posts to the main domain by full URL, so the form also works from the mirrors. -->
+        <form class="pray-form" method="post" action="https://tsunamiunleashed.org/pray/subscribe" accept-charset="utf-8">
+          <!--fill:error--><!--/fill-->
+
+          <fieldset class="pray-options">
+            <legend class="visually-hidden">Choose what you would like to receive</legend>
+
+            <label class="pray-option" id="prayer-updates">
+              <input type="checkbox" name="audience" value="prayer-updates" />
+              <span>
+                <span class="card-title">General prayer updates</span>
+                <span class="card-label">Occasional</span>
+                <span class="pray-option-text">News and prayer needs from across the movement, sent only when
+                  there is something worth praying about. A few times a year.</span>
+              </span>
+            </label>
+
+            <label class="pray-option" id="ganges-pulse">
+              <input type="checkbox" name="audience" value="ganges-pulse" />
+              <span>
+                <span class="card-title">Ganges Pulse</span>
+                <span class="card-label">Weekly, on Saturdays</span>
+                <span class="pray-option-text">A prayer guide for the Ganges River region. Each week covers six
+                  places along one river, with worship first and then intercession for the people who live
+                  there. It arrives on Saturday, ready for the week ahead.</span>
+              </span>
+            </label>
+
+            <label class="pray-option" id="guide-announcements">
+              <input type="checkbox" name="audience" value="guide-announcements" />
+              <span>
+                <span class="card-title">New guides</span>
+                <span class="card-label">Once, when each launches</span>
+                <span class="pray-option-text">One email when we start a new prayer guide, so you can decide
+                  whether to join it.</span>
+                <span class="pray-soon">A daily prayer guide is coming soon.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="pray-field">
+            <label for="first_name">First name <span class="pray-optional">(optional)</span></label>
+            <input id="first_name" type="text" name="first_name" value="" autocomplete="given-name" maxlength="100" />
+          </div>
+
+          <div class="pray-field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" name="email" value="" autocomplete="email" maxlength="254" required />
+          </div>
+
+          <!-- Spam trap: people never see or fill this field. -->
+          <div class="pray-hp" aria-hidden="true">
+            <label for="website">Leave this empty</label>
+            <input id="website" type="text" name="website" value="" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div>
+            <label class="pray-check">
+              <input type="checkbox" name="privacy" value="yes" required aria-describedby="privacy-help" />
+              <span>I'll keep these guides private, as their conditions ask.</span>
+            </label>
+            <p class="pray-help" id="privacy-help">
+              The guides name believers only as they wished to be named, and some of the data in them may not
+              be republished. Please share them by email or on paper, never on a website or social media.
+            </p>
+          </div>
+
+          <div class="pray-actions">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-heading">What happens next</h2>
+        <p class="section-intro">
+          We'll send you one email to confirm. Nothing else arrives until you click the link inside it. You
+          can change your choices or leave at any time from the link at the bottom of every email.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-heading">Privacy</h2>
+        <p class="section-intro">
+          This page doesn't track you, and our emails don't either. We use your address only to send what you
+          chose, and we never share it.
+        </p>
+      </section>
+
+      <section class="section-block" id="phone">
+        <h2 class="section-heading">Prefer your phone?</h2>
+        <p class="section-intro">
+          <!-- TODO: replace both #phone links with the channel URLs once the channels exist. -->
+          You can also follow along for general prayer updates on
+          <a href="#phone">WhatsApp</a> or <a href="#phone">Telegram</a>.
+          These carry general updates only. The prayer guides come by email, to keep them private.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <span>
+    All content here is offered freely to serve the Body of Christ. You may copy, translate, adapt,
+    and share it in any way that remains faithful to Scripture and honors the Lord Jesus.
+    <br />This work is released under the CC0 1.0 Public Domain Dedication, so you may use it without
+    restriction for the sake of the gospel.
+    </span>
+    <div class="footer-links">
+      <a href="https://tsunamiunleashed.com" target="_blank" rel="noopener">Looking for the teaching to use and share? →</a>
+      <a href="../commands.html">The General Commands of Jesus</a>
+      <a href="../index.html#how-it-fits">How this all fits together</a>
+    </div>
+  </footer>
+
+  <!-- /pray#ganges-pulse (or any audience id) ticks that box. Without JavaScript the
+       anchor still scrolls to and highlights the card. -->
+  <script>
+    (function () {
+      function pick() {
+        var id = location.hash.slice(1);
+        if (!/^[a-z-]+$/.test(id)) return;
+        var box = document.querySelector('input[name="audience"][value="' + id + '"]');
+        if (box) box.checked = true;
+      }
+      pick();
+      window.addEventListener("hashchange", pick);
+    })();
+  </script>
+</body>
+</html>
