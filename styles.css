@@ -2,15 +2,15 @@
    Tsunami Unleashed — .org (ministry / the "why")
    Deep-water identity, shared with the .com user-facing site:
    abyss teal + dawn gold, Fraunces (display) / IBM Plex Sans
-   (body) / IBM Plex Mono (labels). Calmer and more readable
+   (body) / IBM Plex Mono (labels), used only when installed on the
+   visitor's device: no web fonts, so no request leaves the site.
+   Otherwise Georgia and the system fonts. Calmer and more readable
    than .com, for long-form reading.
 
    This is a drop-in replacement for the original styles.css.
    It maps onto the existing class names, so all pages, the
    language system, and the CMS keep working unchanged.
    ============================================================ */
-
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
 
 :root {
   --abyss: #05171d;
