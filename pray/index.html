@@ -72,10 +72,10 @@
               <input type="checkbox" name="audience" value="ganges-pulse" />
               <span>
                 <span class="card-title">Ganges Pulse</span>
-                <span class="card-label">Weekly, on Saturdays</span>
+                <span class="card-label">Weekly, early Monday morning</span>
                 <span class="pray-option-text">A prayer guide for the Ganges River region. Each week covers six
                   places along one river, with worship first and then intercession for the people who live
-                  there. It arrives on Saturday, ready for the week ahead.</span>
+                  there. It arrives early Monday morning, ready for the week ahead.</span>
               </span>
             </label>
 
@@ -112,10 +112,8 @@
               <input type="checkbox" name="privacy" value="yes" required aria-describedby="privacy-help" />
               <span>I'll keep these guides private, as their conditions ask.</span>
             </label>
-            <p class="pray-help" id="privacy-help">
-              The guides name believers only as they wished to be named, and some of the data in them may not
-              be republished. Please share them by email or on paper, never on a website or social media.
-            </p>
+            <!-- The notice comes from tu-distro's assets/prayer.json (npm run pray:sync-page); edit it there. -->
+            <p class="pray-help" id="privacy-help"><!--prayer:privacy-->The guides name believers only as they wished to be named, and some of the data in them may not be republished. Please share them by email or on paper, never on a website or social media.<!--/prayer--></p>
           </div>
 
           <div class="pray-actions">
@@ -143,9 +141,10 @@
       <section class="section-block" id="phone">
         <h2 class="section-heading">Prefer your phone?</h2>
         <p class="section-intro">
-          <!-- TODO: replace both #phone links with the channel URLs once the channels exist. -->
+          <!-- Links come from tu-distro's assets/prayer.json (npm run pray:sync-page); edit them there. -->
           You can also follow along for general prayer updates on
-          <a href="#phone">WhatsApp</a> or <a href="#phone">Telegram</a>.
+          <a href="https://whatsapp.com/channel/0029VbEGlJJCXC3LZQRxWH3z" data-channel="whatsapp" target="_blank" rel="noopener">WhatsApp</a> or
+          <a href="https://t.me/tsunamiprayer" data-channel="telegram" target="_blank" rel="noopener">Telegram</a>.
           These carry general updates only. The prayer guides come by email, to keep them private.
         </p>
       </section>
