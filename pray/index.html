@@ -68,16 +68,19 @@
               </span>
             </label>
 
-            <label class="pray-option" id="ganges-pulse">
-              <input type="checkbox" name="audience" value="ganges-pulse" />
-              <span>
-                <span class="card-title">Ganges Pulse</span>
-                <span class="card-label">Weekly, early Monday morning</span>
-                <span class="pray-option-text">A prayer guide for the Ganges River region. Each week covers six
-                  places along one river, with worship first and then intercession for the people who live
-                  there. It arrives early Monday morning, ready for the week ahead.</span>
-              </span>
-            </label>
+            <div class="pray-option pray-option-group" id="ganges-pulse">
+              <span class="card-title">Ganges Pulse</span>
+              <span class="pray-option-text">A prayer guide for the Ganges River region: six places along one
+                river, worship first, then intercession.</span>
+              <label class="pray-choice">
+                <input type="checkbox" name="audience" value="ganges-pulse-daily" />
+                <span>Daily: one place each morning</span>
+              </label>
+              <label class="pray-choice">
+                <input type="checkbox" name="audience" value="ganges-pulse" />
+                <span>Weekly: the whole week, early Monday</span>
+              </label>
+            </div>
 
             <label class="pray-option" id="guide-announcements">
               <input type="checkbox" name="audience" value="guide-announcements" />
@@ -86,7 +89,6 @@
                 <span class="card-label">Once, when each launches</span>
                 <span class="pray-option-text">One email when we start a new prayer guide, so you can decide
                   whether to join it.</span>
-                <span class="pray-soon">A daily prayer guide is coming soon.</span>
               </span>
             </label>
           </fieldset>
@@ -166,12 +168,13 @@
     </div>
   </footer>
 
-  <!-- /pray#ganges-pulse (or any audience id) ticks that box. Without JavaScript the
-       anchor still scrolls to and highlights the card. -->
+  <!-- /pray#ganges-pulse ticks Daily; /pray#<audience id> ticks that box. Without
+       JavaScript the anchor still scrolls to and highlights the card. -->
   <script>
     (function () {
       function pick() {
         var id = location.hash.slice(1);
+        if (id === "ganges-pulse") id = "ganges-pulse-daily";
         if (!/^[a-z-]+$/.test(id)) return;
         var box = document.querySelector('input[name="audience"][value="' + id + '"]');
         if (box) box.checked = true;
