@@ -17,7 +17,9 @@
 .pray-option .card-title { margin: 0 .5rem .2rem 0; display: inline-block; }
 .pray-option .card-label { display: inline-block; margin: 0; }
 .pray-option-text { display: block; font-size: .96rem; line-height: 1.6; color: var(--text); }
-.pray-soon { display: block; margin-top: .45rem; font-size: .9rem; color: var(--haze); }
+.pray-option-group { display: block; cursor: default; }
+.pray-option-group .card-title { display: block; }
+.pray-choice { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; margin-top: .7rem; color: var(--foam); cursor: pointer; }
 .pray-form input[type="checkbox"] {
   width: 1.15rem; height: 1.15rem; margin: .3rem 0 0; accent-color: var(--dawn);
 }
