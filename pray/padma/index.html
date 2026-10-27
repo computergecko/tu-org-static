@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Padma Pulse: pray for Bangladesh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Padma Pulse, a weekly prayer guide for Bangladesh: one region a day, following its rivers to the sea. Worship first, then prayer. Prayer only, nothing else."
+  />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pray/pray.css" />
+  <link rel="stylesheet" href="/pray/padma/padma.css" />
+</head>
+<body>
+  <header class="padma-top">
+    <span class="nav-title">Padma Pulse</span>
+    <span class="nav-subtitle">A weekly prayer guide for Bangladesh</span>
+  </header>
+
+  <div class="page-shell">
+    <main class="inner">
+
+      <section class="section-block">
+        <h1 class="page-heading">Pray for Bangladesh</h1>
+        <p class="section-intro">
+          Padma is what Bangladesh calls the Ganges. Padma Pulse follows its waters, and its sister rivers,
+          from the north to the sea: one region a day from Monday to Saturday, and the whole country on Sunday.
+        </p>
+        <ul class="padma-days">
+          <li>Monday: Rangpur</li>
+          <li>Tuesday: Rajshahi</li>
+          <li>Wednesday: Dhaka and Mymensingh</li>
+          <li>Thursday: Sylhet</li>
+          <li>Friday: Chattogram</li>
+          <li>Saturday: Khulna and Barishal</li>
+          <li>Sunday: the whole country, worship only</li>
+        </ul>
+        <p class="section-intro" style="margin-top:0.85rem;">
+          Each day begins with worship. We adore one side of who God is, pray a passage of Scripture aloud,
+          thank Him and give ourselves back to Him. Then we pray for the region's week: its news, a people group
+          who have not yet heard of Jesus, the church, and the believers who stand firm there.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <p class="padma-promise">
+          <strong>Prayer only.</strong> Padma Pulse never carries news about any organization and never asks
+          for money. Your address is used for this guide and nothing else, and you can leave from any email.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <!-- Posts to the main domain by full URL, so the form also works from the mirrors. page=padma
+             tells the sign-up Worker to answer with these pages and Padma Pulse's own emails. -->
+        <form class="pray-form" method="post" action="https://tsunamiunleashed.org/pray/subscribe" accept-charset="utf-8">
+          <!--fill:error--><!--/fill-->
+          <input type="hidden" name="page" value="padma" />
+
+          <fieldset class="pray-options">
+            <legend class="visually-hidden">Choose how you would like to receive it</legend>
+
+            <label class="pray-option" id="padma-pulse">
+              <input type="checkbox" name="audience" value="padma-pulse" />
+              <span>
+                <span class="card-title">The whole week</span>
+                <span class="card-label">One email, early Monday morning, Bangladesh time</span>
+                <span class="pray-option-text">All seven days in one email, to read ahead or to print and pray
+                  through with others.</span>
+              </span>
+            </label>
+
+            <label class="pray-option" id="padma-pulse-daily">
+              <input type="checkbox" name="audience" value="padma-pulse-daily" />
+              <span>
+                <span class="card-title">One day at a time</span>
+                <span class="card-label">Early each morning, Bangladesh time</span>
+                <span class="pray-option-text">That day's region in a short email: worship, the news to pray
+                  over, a people group, and a prayer to pray together.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="pray-field">
+            <label for="first_name">First name <span class="pray-optional">(optional)</span></label>
+            <input id="first_name" type="text" name="first_name" value="" autocomplete="given-name" maxlength="100" />
+          </div>
+
+          <div class="pray-field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" name="email" value="" autocomplete="email" maxlength="254" required />
+          </div>
+
+          <!-- Spam trap: people never see or fill this field. -->
+          <div class="pray-hp" aria-hidden="true">
+            <label for="website">Leave this empty</label>
+            <input id="website" type="text" name="website" value="" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div>
+            <label class="pray-check">
+              <input type="checkbox" name="privacy" value="yes" required aria-describedby="privacy-help" />
+              <span>I'll share Padma Pulse only by email or on paper.</span>
+            </label>
+            <!-- The same words as tu-distro's assets/prayer.json lists.padma-pulse.notice; change both together. -->
+            <p class="pray-help" id="privacy-help">Please share Padma Pulse by email or on paper with people who will pray, not on a website or social media. It never names a believer or places one closer than their division.</p>
+          </div>
+
+          <div class="pray-actions">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-heading">Sending it to others</h2>
+        <p class="section-intro">
+          If you lead a team, a church or an organization, forward any Padma Pulse email to the people you
+          pray with, or send them this page so they can sign up themselves.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-heading">What happens next</h2>
+        <p class="section-intro">
+          We'll send you one email to confirm. Nothing else arrives until you click the link inside it.
+          This page doesn't track you, and the emails don't either.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="padma-foot">
+    Padma Pulse is prayer for Bangladesh, and nothing else.
+  </footer>
+
+  <!-- /pray/padma/#padma-pulse-daily (either id) ticks that box. Without JavaScript the
+       anchor still scrolls to and highlights the card. -->
+  <script>
+    (function () {
+      function pick() {
+        var id = location.hash.slice(1);
+        if (!/^[a-z-]+$/.test(id)) return;
+        var box = document.querySelector('input[name="audience"][value="' + id + '"]');
+        if (box) box.checked = true;
+      }
+      pick();
+      window.addEventListener("hashchange", pick);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>One more step</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pray/pray.css" />
+  <link rel="stylesheet" href="/pray/padma/padma.css" />
+</head>
+<body>
+  <header class="padma-top">
+    <span class="nav-title">Padma Pulse</span>
+    <span class="nav-subtitle">A weekly prayer guide for Bangladesh</span>
+  </header>
+
+  <div class="page-shell">
+    <main class="inner">
+
+      <section class="section-block">
+        <h1 class="page-heading">One more step</h1>
+        <form class="pray-form" method="post" action="https://tsunamiunleashed.org/pray/confirm" accept-charset="utf-8">
+          <!--fill:error--><!--/fill-->
+          <p class="section-intro">Press the button below to start receiving Padma Pulse.</p>
+          <input type="hidden" name="t" value="" />
+          <!-- If the link has expired by the time the button is pressed, the Worker answers with Padma's page. -->
+          <input type="hidden" name="f" value="padma" />
+          <div class="pray-actions">
+            <button class="btn btn-primary" type="submit">Confirm</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="padma-foot">
+    Padma Pulse is prayer for Bangladesh, and nothing else.
+  </footer>
+</body>
+</html>
