@@ -1,0 +1,13 @@
+/* Padma Pulse's own sign-up pages: the site's colours, none of its navigation.
+   The page promises nothing but prayer, so it links nowhere else. */
+.padma-top { border-bottom: 1px solid var(--tide); padding: 1.1rem 1.5rem; }
+.padma-top .nav-title { display: block; }
+.padma-top .nav-subtitle { display: block; margin-top: .2rem; }
+.padma-promise {
+  margin: 0; padding: 1rem 1.2rem; border-radius: 10px;
+  border: 1px solid var(--current-dim); background: rgba(63, 167, 160, .07);
+  color: var(--foam); line-height: 1.6; max-width: 62ch;
+}
+.padma-promise strong { color: var(--dawn-soft); font-weight: 500; }
+.padma-days { margin: .4rem 0 0; padding-left: 1.2rem; color: var(--text); line-height: 1.7; }
+.padma-foot { border-top: 1px solid var(--tide); padding: 1.4rem 1.5rem 2rem; color: var(--haze); font-size: .9rem; line-height: 1.6; }
