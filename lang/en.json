@@ -7,12 +7,16 @@
   "nav.frameworks": "Frameworks",
   "nav.commands": "The Commands",
   "nav.roles": "Ways to Walk in This",
-  "nav.pray": "Pray with Us",
-  "nav.eternal_life": "Eternal Life",
+  "nav.pray": "Pray with us",
+  "nav.eternal_life": "Eternal life",
   "nav.faith": "Statement of Faith",
   "nav.resilience": "Mirrors & Offline",
-  "nav.contact": "Secure Contact",
+  "nav.contact": "Secure contact",
   "nav.menu": "Menu",
+  "nav.love": "Love Jesus first",
+  "nav.obey": "Obey Him",
+  "nav.pass": "Pass it on",
+  "nav.about": "About us",
   "roles.card1.pray_link": "Pray with us: prayer guides by email →",
   "hero.tag.primary": "A quiet, global move of God",
   "hero.tag.secondary": "Loving Him → Obeying Him → Generations of disciples",
@@ -38,7 +42,7 @@
 
   "footer.com_link": "Looking for the teaching to use and share? →",
   "footer.commands_link": "The General Commands of Jesus",
-  "footer.wisdom_link": "Wisdom, Safety & Privacy",
+  "footer.wisdom_link": "Safety and privacy",
   "footer.fits_link": "How this all fits together",
   "footer.scripture_note": "Scripture quotations are from the World English Bible (WEB), which is in the public domain."
 }

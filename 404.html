@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>That page is not here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="robots" content="noindex" />
+  <!-- Served for any missing address on any host, so it carries its own
+       styles and links that do not depend on where it is shown. -->
+  <style>
+    :root { --bg: #fbfbf9; --text: #1b2430; --soft: #4c5762; --link: #256b77; --line: #d8dcda; --btn: #0f3f63; --btn-fg: #fff; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #05171d; --text: #e8f3f1; --soft: #93b4b7; --link: #f2b863; --line: #173d47; --btn: #f2b863; --btn-fg: #05171d; }
+    }
+    html, body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+    main { max-width: 36rem; margin: 0 auto; padding: 18vh 1.25rem 3rem; }
+    h1 { font: 400 2rem/1.2 Georgia, serif; margin: 0 0 1.4rem; }
+    .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.4rem; border-radius: 4px; background: var(--btn); color: var(--btn-fg); text-decoration: none; }
+    .btn:focus-visible, a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+    footer { border-top: 1px solid var(--line); padding: 1rem 1.25rem 2rem; text-align: center; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 1.5rem; }
+    nav a, nav span { display: inline-flex; align-items: center; min-height: 44px; color: var(--link); text-decoration: none; }
+    nav span { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>That page is not here</h1>
+    <a class="btn" id="home" href="https://tsunamiunleashed.org/">Go to the home page</a>
+  </main>
+  <footer>
+    <nav aria-label="Family of sites">
+      <a href="https://tothelord.com/">Be with God</a>
+      <a href="https://tsunamiunleashed.com/">Follow Jesus together</a>
+      <a href="https://tsunamiunleashed.org/pray/">Pray with us</a>
+      <span aria-current="page">About us</span>
+    </nav>
+  </footer>
+  <script>
+    // On a mirror, the home button goes to that mirror's own home page.
+    (function () {
+      var home = document.getElementById("home");
+      var h = location.hostname;
+      if (h === "tsunamiunleashed.org" || h === "www.tsunamiunleashed.org") return;
+      home.href = /github\.io$/.test(h) ? "/tu-org-static/" : "/";
+    })();
+  </script>
+</body>
+</html>

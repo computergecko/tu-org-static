@@ -29,6 +29,8 @@
           el.setAttribute("content", dict[key]);
         } else {
           el.textContent = dict[key];
+          // mark Hindi words as Hindi, so a reader's phone says and shows them rightly
+          if (/[ऀ-ॿ]/.test(dict[key])) el.setAttribute("lang", "hi");
         }
       });
     })

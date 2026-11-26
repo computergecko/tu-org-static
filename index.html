@@ -9,6 +9,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1"
   />
+  <meta name="color-scheme" content="light dark" />
   <meta
     name="description"
     data-i18n="meta.description"
@@ -19,53 +20,64 @@
   <meta property="og:title" content="A Tsunami of Disciples, Leaders, and Christ Communities" />
   <meta property="og:description" content="A simple explanation of how the Lord is raising a Spirit-led tsunami of disciples, leaders, and Christ communities, and how you might walk with Him in it." />
   <meta property="og:url" content="https://tsunamiunleashed.org/" />
-  <meta property="og:image" content="https://tsunamiunleashed.org/share.png?v=2026-11-26.3" />
+  <meta property="og:image" content="https://tsunamiunleashed.org/share.png?v=2026-11-26.4" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Three waves above the words A Tsunami of Disciples" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="favicon.ico?v=2026-11-26.3" sizes="16x16 32x32 48x48" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2026-11-26.3" />
-  <link rel="stylesheet" href="styles.css?v=2026-11-26.3" />
-  <script src="js/nav.js?v=2026-11-26.3"></script>
+  <link rel="icon" href="favicon.ico?v=2026-11-26.4" sizes="16x16 32x32 48x48" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2026-11-26.4" />
+  <script>
+    // Contact, mirrors and the domain map moved to their own pages on 2026-11-26.
+    // Old links to those parts of the home page still land on them.
+    (function () {
+      var moved = { "#contact": "contact.html", "#resilience": "mirrors.html", "#how-it-fits": "about.html#how-it-fits" };
+      var to = moved[location.hash];
+      if (to) location.replace(to);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=2026-11-26.4" />
+  <script src="js/nav.js?v=2026-11-26.4"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <nav class="nav">
-      <a class="nav-left" href="#top">
-        <div class="nav-title-wrap">
-          <div class="nav-title" data-i18n="brand.name">
-            A Tsunami of Disciples
-          </div>
-          <div class="nav-subtitle" data-i18n="brand.tagline">
-            From His presence to the nations
-          </div>
-        </div>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-left" href="index.html">
+        <span class="nav-title-wrap">
+          <span class="nav-title" data-i18n="brand.name">A Tsunami of Disciples</span>
+          <span class="nav-subtitle" data-i18n="brand.tagline">From His presence to the nations</span>
+        </span>
       </a>
-<div class="nav-links" id="site-menu">
-  <a href="#top" data-i18n="nav.home">Home</a>
-  <a href="#frameworks" data-i18n="nav.frameworks">Frameworks</a>
-  <a href="commands.html" data-i18n="nav.commands">The Commands</a>
-  <a href="#roles" data-i18n="nav.roles">Ways to Walk in This</a>
-  <a href="https://tsunamiunleashed.org/pray/" data-i18n="nav.pray">Pray with Us</a>
-  <a href="#eternal-life" data-i18n="nav.eternal_life">Eternal Life</a>
-  <a href="4.html" data-i18n="nav.faith">Statement of Faith</a>
-  <a href="#resilience" data-i18n="nav.resilience">Mirrors &amp; Offline</a>
-</div>
-      <div class="nav-cta">
-        <select id="lang-switch" class="btn-ghost" style="padding:0.35rem 0.75rem; font-size:0.8rem;">
-          <option value="en">EN</option>
-          <option value="hi">HI</option>
-        </select>
-        <a class="btn-ghost" href="#contact" data-i18n="nav.contact">Secure Contact</a>
-        <button class="btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-i18n="nav.menu">Menu</button>
-        <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-i18n="nav.menu">Menu</button>
+      <div class="nav-links" id="site-menu">
+        <a href="1.html" data-i18n="nav.love">Love Jesus first</a>
+        <a href="2.html" data-i18n="nav.obey">Obey Him</a>
+        <a href="3.html" data-i18n="nav.pass">Pass it on</a>
+        <a href="index.html#eternal-life" data-i18n="nav.eternal_life">Eternal life</a>
+        <a href="https://tsunamiunleashed.org/pray/" data-i18n="nav.pray">Pray with us</a>
+        <a href="about.html" data-i18n="nav.about">About us</a>
+        <span class="nav-extra">
+          <a href="contact.html" data-i18n="nav.contact">Secure contact</a>
+          <label class="lang-wrap"><span>Language</span>
+            <select id="lang-switch">
+              <option value="en">English</option>
+              <option value="hi" lang="hi">हिन्दी</option>
+            </select>
+          </label>
+        </span>
+        <span class="nav-family" role="group" aria-label="Family of sites">
+          <a href="https://tothelord.com/">Be with God</a>
+          <a href="https://tsunamiunleashed.com/">Follow Jesus together</a>
+          <a href="https://tsunamiunleashed.org/pray/">Pray with us</a>
+          <span aria-current="page">About us</span>
+        </span>
       </div>
     </nav>
   </header>
 
   <div id="top" class="page-shell">
-    <main class="inner">
+    <main class="inner" id="main">
 
       <!-- HERO -->
       <section class="hero">
@@ -78,6 +90,16 @@
           A tsunami of disciples, leaders, and Christ communities — flowing from loving Jesus first.
         </h1>
 
+        <p class="hero-lead">
+          <a href="1.html">Love Jesus first</a>, <a href="2.html">obey Him</a>,
+          <a href="3.html">pass it on</a>, and walk with us.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://tsunamiunleashed.org/pray/">Pray with us</a>
+          <a class="btn btn-ghost" href="about.html#help">How to help</a>
+        </div>
+
         <p class="hero-sub" data-i18n="hero.subtitle">
           Around the world, believers are discovering again that everything begins with loving the Lord
           with all our heart, soul, mind, and strength. As they draw near to Him and simply do what He
@@ -85,15 +107,6 @@
           often in hidden ways. This site only describes what many have seen in Scripture and on the ground,
           and offers simple pathways for you to walk with Him in the same direction.
         </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="1.html" data-i18n="hero.cta_primary">
-            Start with Ministry to the Lord (M2L)
-          </a>
-          <button class="btn btn-ghost" data-scroll="#frameworks" data-i18n="hero.cta_secondary">
-            See the Three Frameworks
-          </button>
-        </div>
 
         <div class="hero-note" data-i18n="hero.note">
           We are not asking you to join an organization or a brand. We simply invite you to seek the Lord,
@@ -294,7 +307,7 @@
                 especially in places where open access is limited.
               </p>
               <p class="bridge-note">
-                <a href="https://tsunamiunleashed.com" target="_blank" rel="noopener" data-i18n="bridge.com_link">
+                <a href="https://tsunamiunleashed.com" data-i18n="bridge.com_link">
                   Looking for the actual teaching to use and share? →
                 </a>
               </p>
@@ -315,298 +328,29 @@
         </div>
       </section>
 
-      <!-- SECURE CONTACT -->
-      <section id="contact">
-        <div class="section-block cta-section">
-          <h2 class="section-heading" data-i18n="contact.heading">
-            Secure Ways to Reach Out
-          </h2>
-          <p class="section-intro" style="margin-left:auto;margin-right:auto;" data-i18n="contact.intro">
-            If the Lord is stirring something in your heart as you read this — whether related to prayer,
-            obedience in your local context, translation, quiet distribution, or simply a deeper desire
-            to love Him — you may wish to connect with others walking in similar ways. The options below
-            use tools that are harder to censor or shut down.
-          </p>
-
-          <div class="teaser" style="text-align:left;">
-            <a href="wisdom.html" data-i18n="wisdom.teaser.link">Wisdom, Safety &amp; Privacy →</a>
-            <span data-i18n="wisdom.teaser.note">
-              Before you reach out: we keep no lists of people, share only what is wise, and know and honor
-              the laws where you are. Please read this first.
-            </span>
-          </div>
-
-          <div class="contact-options">
-            <div class="contact-card">
-              <h3 data-i18n="contact.proton.heading">Secure Email (ProtonMail)</h3>
-              <p data-i18n="contact.proton.text">
-                ProtonMail is an end-to-end encrypted email service based in Switzerland. You can create a
-                free account without connecting it to your everyday email ecosystem.
-              </p>
-              <p>
-                <strong data-i18n="contact.proton.address_label">Address:</strong>
-                <span class="mono">justchattu@pm.me</span>
-              </p>
-              <p data-i18n="contact.proton.note">
-                If you decide to write, you may wish to share only what is wise for your situation.
-                You can also create a fresh ProtonMail account specifically for sensitive communication.
-              </p>
-            </div>
-
-            <div class="contact-card">
-              <h3 data-i18n="contact.session.heading">Anonymous Messaging (Session)</h3>
-              <p data-i18n="contact.session.text">
-                Session is a messaging app designed for high privacy and anonymity. It does not require a
-                phone number and routes messages through a decentralized network.
-              </p>
-              <p>
-                <strong data-i18n="contact.session.id_label">Session ID:</strong>
-                <span class="mono">
-                  05419d5701de8b1dbfc26bea028db7c01ded53fb59b9a35fd77cba338e1a895b10
-                </span>
-              </p>
-              <ol class="contact-steps">
-                <li data-i18n="contact.session.step1">
-                  Install the Session app from the official website or app store.
-                </li>
-                <li data-i18n="contact.session.step2">
-                  Create a new Session account and save your recovery phrase in a safe place.
-                </li>
-                <li data-i18n="contact.session.step3">
-                  Use the Session ID above to start a new conversation. Share only what you sense
-                  the Lord is asking you to share.
-                </li>
-              </ol>
-            </div>
-          </div>
-
-          <p class="section-intro small" data-i18n="contact.disclaimer">
-            No one here can tell you what level of risk is appropriate in your situation. Please seek the
-            Lord, consider local realities, and take counsel from mature believers around you.
-          </p>
-        </div>
-      </section>
-
-      <!-- RESILIENCE / MIRRORS & OFFLINE -->
-      <section id="resilience">
-        <div class="section-block">
-          <h2 class="section-heading" data-i18n="resilience.heading">
-            If This Site Ever Disappears
-          </h2>
-          <p class="section-intro" data-i18n="resilience.intro">
-            Websites and domains can be blocked, seized, or shut down. The truths and patterns described
-            here do not belong to any one site or group. If this particular copy ever goes offline, you
-            can still access and share the content in several ways.
-          </p>
-
-          <div class="grid-2">
-            <div class="card">
-              <h3 data-i18n="resilience.mirrors.heading">Mirror Copies</h3>
-              <p data-i18n="resilience.mirrors.text">
-                In some cases, believers may host simple copies of this same content under different
-                domain names or on different hosting providers.
-              </p>
-              <ul class="section-list">
-                <li data-i18n="resilience.mirrors.li1">
-                  If someone you trust has shared a mirror link with you, save it in a secure place.
-                </li>
-                <li data-i18n="resilience.mirrors.li2">
-                  You may print or save key pages as PDF for local study and reference.
-                </li>
-                <li data-i18n="resilience.mirrors.li3">
-                  If you host a mirror yourself, please keep the content faithful to Scripture and
-                  avoid attaching it to any personal brand or fundraising effort.
-                </li>
-              </ul>
-          <ul class="section-list">
-  <li>
-    Main site:
-    <a href="https://tsunamiunleashed.org" target="_blank">
-      <code>https://tsunamiunleashed.org</code>
-    </a>
-  </li>
-
-  <li>
-    Mirror 1:
-    <a href="https://computergecko.github.io/tu-org-static" target="_blank">
-      <code>https://computergecko.github.io/tu-org-static</code>
-    </a>
-  </li>
-
-  <li>
-    Mirror 2:
-    <a href="https://glittering-selkie-69241d.netlify.app" target="_blank">
-      <code>https://glittering-selkie-69241d.netlify.app</code>
-    </a>
-  </li>
-
-  <li>
-    Mirror 3:
-    <a href="https://tu-org-static.pages.dev" target="_blank">
-      <code>https://tu-org-static.pages.dev</code>
-    </a>
-  </li>
-
-  <li>
-    Mirror 4:
-    <a href="https://tu-org-static.vercel.app" target="_blank">
-      <code>https://tu-org-static.vercel.app</code>
-    </a>
-  </li>
-</ul>
 
 
-            </div>
-
-<div class="card">
-  <h3 data-i18n="resilience.offline.heading">Offline Copy</h3>
-
-  <p data-i18n="resilience.offline.text">
-    You can download a complete offline version of this website. It will work without internet,
-    can be shared freely, and can be opened on most computers and mobile devices.
-  </p>
-
-  <a href="offline.zip?v=2026-11-26.3" download class="btn btn-primary" style="margin-top:0.75rem;">
-    Download Offline Copy (ZIP): Updated 2026-11
-  </a>
-
-  <ul class="section-list" style="margin-top:0.9rem;">
-    <li data-i18n="resilience.offline.li1">
-      Download the file <strong>offline.zip</strong> to your phone or computer.
-    </li>
-    <li data-i18n="resilience.offline.li2">
-      Unzip (extract) <strong>offline.zip</strong>. A folder will appear with the website files.
-    </li>
-    <li data-i18n="resilience.offline.li3">
-      Open the folder and double-click <code>index.html</code>. The TU.org site will open in your browser
-      and work completely offline.
-    </li>
-    <li data-i18n="resilience.offline.li4">
-      To share with others, copy the whole folder to a USB drive, SD card, or phone, and tell them to open
-      <code>index.html</code> on their own device.
-    </li>
-  </ul>
-</div>
-
-          </div>
-
-          <div class="teaser">
-            <a href="https://tsunamiunleashed.com" target="_blank" rel="noopener" data-i18n="bridge.com_link">
-              Looking for the actual teaching to use and share? →
-            </a>
-            <span data-i18n="bridge.com_note">
-              The materials themselves live on a separate, simple static site, so they can keep being copied,
-              mirrored, and translated even if this one is unavailable.
-            </span>
-          </div>
-
-          <p class="section-intro small" style="margin-top:1rem;">
-            <span data-i18n="resilience.wisdom">
-              If you are in a place where following Jesus is costly, please read this before saving,
-              sharing, or hosting copies:
-            </span>
-            <a href="wisdom.html" data-i18n="footer.wisdom_link">Wisdom, Safety &amp; Privacy</a>
-          </p>
-
-          <p class="section-intro small" data-i18n="resilience.outro">
-            Ultimately, the safest “storage place” for these patterns is in the hearts and lives of people
-            who know Jesus, love Him, and obey His commands. Websites may come and go. His Word endures forever.
-          </p>
-        </div>
-      </section>
-
-      <!-- HOW THIS ALL FITS TOGETHER -->
-      <section id="how-it-fits">
-        <div class="section-block">
-          <h2 class="section-heading" data-i18n="fits.heading">How This All Fits Together</h2>
-          <p class="section-intro" data-i18n="fits.intro">
-            You may come across more than one address for this work. They are not competing sites; each
-            simply carries a different part.
-          </p>
-
-          <ul class="domain-map">
-            <li>
-              <span class="domain">tsunamiunleashed.org</span> —
-              <span data-i18n="fits.org">this site: the heart and the “why.” Why loving Him comes first, and
-              what the Lord seems to be doing.</span>
-            </li>
-            <li>
-              <span class="domain">tsunamiunleashed.com</span> —
-              <span data-i18n="fits.com">the materials to use and share: the actual teaching, in a form you can
-              take, translate, and pass on.</span>
-              <a href="https://tsunamiunleashed.com" target="_blank" rel="noopener">→</a>
-            </li>
-            <li>
-              <span class="domain">7gc.me</span> —
-              <span data-i18n="fits.7gc">short links to resources: the updated version, the translation template,
-              and more.</span>
-              <a href="https://7gc.me" target="_blank" rel="noopener">→</a>
-            </li>
-          </ul>
-
-          <p class="section-intro small" style="margin-top:1rem;" data-i18n="fits.outro">
-            Everything on all three is released freely, under CC0, so it can be copied, mirrored, and
-            translated without asking anyone’s permission.
-          </p>
-        </div>
-      </section>
 
     </main>
   </div>
 
   <footer>
-    <span data-i18n="footer.text">
-    All content here is offered freely to serve the Body of Christ. You may copy, translate, adapt,
-    and share it in any way that remains faithful to Scripture and honors the Lord Jesus.
-    </br>This work is released under the CC0 1.0 Public Domain Dedication, so you may use it without
-    restriction for the sake of the gospel.<br> Site Updated: 2026-11-26
-    </span>
+    <nav class="family-strip" aria-label="Family of sites">
+          <a href="https://tothelord.com/">Be with God</a>
+          <a href="https://tsunamiunleashed.com/">Follow Jesus together</a>
+          <a href="https://tsunamiunleashed.org/pray/">Pray with us</a>
+          <span aria-current="page">About us</span>
+    </nav>
     <div class="footer-links">
-      <a href="https://tsunamiunleashed.com" target="_blank" rel="noopener" data-i18n="footer.com_link">Looking for the teaching to use and share? →</a>
-      <a href="commands.html" data-i18n="footer.commands_link">The General Commands of Jesus</a>
-      <a href="wisdom.html" data-i18n="footer.wisdom_link">Wisdom, Safety &amp; Privacy</a>
-      <a href="#how-it-fits" data-i18n="footer.fits_link">How this all fits together</a>
+      <a href="wisdom.html" data-i18n="footer.wisdom_link">Safety and privacy</a>
+      <a href="contact.html">Secure contact</a>
     </div>
-    <div class="footer-note" data-i18n="footer.scripture_note">
+    <p class="footer-text">All content here is offered freely to serve the Body of Christ. You may copy, translate, adapt, and share it in any way that remains faithful to Scripture and honors the Lord Jesus. <br />This work is released under the CC0 1.0 Public Domain Dedication, so you may use it without restriction for the sake of the gospel.<br /> Site Updated: 2026-11-26</p>
+    <p class="footer-note" data-i18n="footer.scripture_note">
       Scripture quotations are from the World English Bible (WEB), which is in the public domain.
-    </div>
+    </p>
   </footer>
 
-  <script src="js/i18n.js?v=2026-11-26.3"></script>
-  <script>
-    // Theme toggle
-    (function() {
-      var stored = null;
-      try { stored = localStorage.getItem("tu-theme"); } catch (e) {}
-      if (stored === "dark") document.body.classList.add("dark");
-      var btn = document.getElementById("theme-toggle");
-      function syncIcon() {
-        if (!btn) return;
-        btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-      }
-      syncIcon();
-      if (btn) {
-        btn.addEventListener("click", function () {
-          document.body.classList.toggle("dark");
-          syncIcon();
-          try {
-            localStorage.setItem("tu-theme",
-              document.body.classList.contains("dark") ? "dark" : "light");
-          } catch (e) {}
-        });
-      }
-    })();
-
-    // Smooth scrolling for in-page buttons
-    document.querySelectorAll("[data-scroll]").forEach(function (el) {
-      el.addEventListener("click", function () {
-        var target = document.querySelector(el.getAttribute("data-scroll"));
-        if (target) {
-          var top = target.getBoundingClientRect().top + window.pageYOffset - 80;
-          window.scrollTo({ top: top, behavior: "smooth" });
-        }
-      });
-    });
-  </script>
+  <script src="js/i18n.js?v=2026-11-26.4"></script>
 </body>
 </html>
