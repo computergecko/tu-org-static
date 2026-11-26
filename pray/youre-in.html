@@ -5,11 +5,15 @@
   <title>You&#39;re in</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
+  <link rel="icon" href="../favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="pray.css" />
+  <script src="../js/nav.js"></script>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav class="nav">
       <div class="nav-left">
         <div class="nav-title-wrap">
@@ -17,17 +21,19 @@
           <div class="nav-subtitle">From His presence to the nations</div>
         </div>
       </div>
-      <div class="nav-links">
+      <div class="nav-links" id="site-menu">
         <a href="../index.html#top">Home</a>
         <a href="../index.html#frameworks">Frameworks</a>
         <a href="../commands.html">The Commands</a>
         <a href="../index.html#roles">Ways to Walk in This</a>
+        <a href="index.html">Pray with Us</a>
         <a href="../index.html#eternal-life">Eternal Life</a>
         <a href="../4.html">Statement of Faith</a>
         <a href="../index.html#resilience">Mirrors &amp; Offline</a>
       </div>
       <div class="nav-cta">
         <a class="btn-ghost" href="../index.html#contact">Secure Contact</a>
+        <button class="btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
       </div>
     </nav>
   </header>

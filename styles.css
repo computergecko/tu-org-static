@@ -65,8 +65,12 @@ a:hover { color: var(--dawn-soft); }
 h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; line-height: 1.12; letter-spacing: -.01em; color: var(--foam); }
 
 /* ---------------- Nav ---------------- */
+/* The header sticks, not the nav inside it: a sticky element only moves
+   within its parent, and the header is exactly as tall as the nav. */
+.site-header { position: sticky; top: 0; z-index: 20; }
+html { scroll-padding-top: 5.5rem; }
+
 .nav {
-  position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem; padding: .8rem clamp(1rem, 4vw, 2.5rem);
   background: rgba(5, 23, 29, .82);
@@ -91,6 +95,17 @@ h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; line-height: 1
 .nav-links a:hover { color: var(--foam); text-decoration: none; }
 .nav-cta { display: flex; align-items: center; gap: .55rem; flex: none; }
 .nav-cta .btn-ghost { white-space: nowrap; }
+
+/* menu button: shown at 1080px and below, and only when js/nav.js has run */
+.nav-cta .nav-toggle { display: none; }
+.nav-toggle::before {
+  content: ""; width: 14px; height: 10px; flex: none;
+  background:
+    linear-gradient(currentColor 0 0) top / 100% 1.5px no-repeat,
+    linear-gradient(currentColor 0 0) center / 100% 1.5px no-repeat,
+    linear-gradient(currentColor 0 0) bottom / 100% 1.5px no-repeat;
+}
+.nav-toggle[aria-expanded="true"] { border-color: var(--current); }
 
 /* the nav carries 7 items; trim the decorative subtitle before the links wrap,
    and keep the wrapped state compact when they do */
@@ -295,8 +310,28 @@ footer a { color: var(--current); }
 .footer-note { margin-top: 1rem; font-size: .74rem; color: var(--haze-dim); }
 
 /* ---------------- Responsive ---------------- */
+/* Below about 1060px the eight links wrap to three rows or more, too tall
+   for a header that sticks, so from 1080px down they move into a menu. */
+@media (max-width: 1080px) {
+  /* Without JavaScript the links wrap onto their own rows under the brand,
+     and the header stops sticking so it never covers half the screen. */
+  .nav { flex-wrap: wrap; }
+  .nav-links { order: 3; flex-basis: 100%; justify-content: flex-start; }
+  html:not(.js) .site-header { position: static; }
+
+  /* With JavaScript the links fold into the Menu button. */
+  .js .nav-cta .nav-toggle { display: inline-flex; }
+  .js .nav-links { display: none; }
+  .js .nav-open .nav-links {
+    display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0;
+    max-height: calc(100vh - 5rem); overflow-y: auto;
+    border-top: 1px solid var(--tide); padding-top: .2rem;
+  }
+  .js .nav-open .nav-links a { padding: .75rem .2rem; font-size: .8rem; border-bottom: 1px solid rgba(23, 61, 71, .6); }
+  .js .nav-open .nav-links a:last-child { border-bottom: 0; }
+}
+
 @media (max-width: 800px) {
-  .nav-links { display: none; }
   .grid-3, .grid-2, .contact-options { grid-template-columns: 1fr; }
   .hero { padding: 1.9rem 1.3rem 3rem; }
   .nav-subtitle { display: none; }
@@ -314,4 +349,39 @@ footer a { color: var(--current); }
   .nav-cta .btn-ghost { white-space: normal; font-size: .66rem; padding: .5rem .6rem; line-height: 1.2; }
   select.btn-ghost { padding: .35rem .5rem !important; padding-right: 1.5rem !important; }
   .footer-links { gap: .55rem 1rem; font-size: .68rem; }
+}
+
+/* ---------------- Print ---------------- */
+/* The site asks readers to print and pass pages on: black on white, no
+   navigation or buttons, and the web address after each outside link. */
+@media print {
+  @page { margin: 1.6cm; }
+  *, *::before, *::after {
+    background: transparent !important; color: #000 !important;
+    box-shadow: none !important; text-shadow: none !important;
+    backdrop-filter: none !important; transition: none !important;
+  }
+  html, body { background: #fff !important; font-weight: 400; font-size: 11.5pt; line-height: 1.5; }
+  .site-header, .hero::after, .hero-actions, .cta-buttons, .btn, .btn-ghost,
+  .footer-links, .pray-actions, #theme-toggle { display: none !important; }
+
+  .inner { max-width: none; padding: 0; }
+  .hero, .section-block, .card, .contact-card, .teaser, .scripture-callout,
+  .story-block blockquote, .pray-option {
+    border-color: #999 !important; border-radius: 6px; transform: none !important;
+    padding: .8rem 1rem; margin-bottom: 1rem;
+  }
+  .hero-sub, .section-intro, .section-intro.small, .card, .teaser span, .bridge-note,
+  .hero-note, .ref, .footer-note, footer { color: #222 !important; }
+  .card-label, .scripture-ref, .hero-tag span, .domain-map .domain { color: #444 !important; }
+  .card:hover, .contact-card:hover { transform: none; }
+
+  a { text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; word-break: break-all; }
+
+  h1, h2, h3, h4, .card-title { break-after: avoid; page-break-after: avoid; }
+  .card, .contact-card, .scripture-callout, .story-block blockquote, .command-list li, .pray-option {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  footer { border-top: 1px solid #999; padding: 1rem 0 0; }
 }
