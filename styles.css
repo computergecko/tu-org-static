@@ -80,8 +80,10 @@ html { scroll-padding-top: 5.5rem; }
 }
 .nav-left { display: flex; align-items: center; gap: .7rem; }
 .nav-left::before {
-  content: ""; width: 26px; height: 26px; flex: none;
-  background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M2 22c3 0 3-3 6-3s3 3 6 3 3-3 6-3 3 3 6 3' stroke='%233fa7a0' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M2 16c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4' stroke='%233fa7a0' stroke-width='1.6' stroke-linecap='round' opacity='.7'/%3E%3Cpath d='M2 10c3 0 3-5 6-5s3 5 6 5 3-5 6-5 3 5 6 5' stroke='%23f2b863' stroke-width='1.6' stroke-linecap='round' opacity='.9'/%3E%3C/svg%3E");
+  /* the ministry's wave-and-cross logo, without its words; the outline is lifted
+     from black to foam so it shows on the dark page */
+  content: ""; width: 42px; height: 37px; flex: none;
+  background: no-repeat center/contain url("logo-mark.png");
 }
 .nav-title-wrap { display: flex; flex-direction: column; gap: .12rem; }
 .nav-title { font-family: var(--f-mono); font-weight: 500; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--foam); white-space: nowrap; }
@@ -343,7 +345,7 @@ footer a { color: var(--current); }
 @media (max-width: 560px) {
   .nav { gap: .6rem; padding-left: .9rem; padding-right: .9rem; }
   .nav-left { min-width: 0; flex: 1 1 auto; }
-  .nav-left::before { width: 22px; height: 22px; }
+  .nav-left::before { width: 30px; height: 26px; }
   .nav-title { white-space: normal; font-size: .74rem; letter-spacing: .1em; }
   .nav-cta { flex: 0 1 auto; min-width: 0; gap: .4rem; }
   .nav-cta .btn-ghost { white-space: normal; font-size: .66rem; padding: .5rem .6rem; line-height: 1.2; }
