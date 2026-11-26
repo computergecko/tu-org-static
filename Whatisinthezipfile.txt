@@ -13,7 +13,8 @@ Folders:
   - commands.html       (The General Commands of Jesus)
   - wisdom.html         (Wisdom, Safety & Privacy)
   - styles.css
-  - whatisinzipfile.txt (this file)
+  - favicon.svg         (the site's icon)
+  - Whatisinthezipfile.txt (this file)
 
 To use: extract the folder and open index.html in any browser.
 Everything works offline. Copy the whole folder to a USB drive, SD card,
