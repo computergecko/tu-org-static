@@ -6,14 +6,18 @@ Folders:
 
  Files:
   - index.html          (home)
-  - 1.html              (Ministry to the Lord - M2L)
-  - 2.html              (Ministry for the Lord - M4L)
-  - 3.html              (Exponential Reproduction / disciple-through)
+  - 1.html              (Love Jesus first: Ministry to the Lord - M2L)
+  - 2.html              (Obey Him: Ministry for the Lord - M4L)
+  - 3.html              (Pass it on: Exponential Reproduction / disciple-through)
   - 4.html              (Statement of Faith)
   - commands.html       (The General Commands of Jesus)
   - wisdom.html         (Wisdom, Safety & Privacy)
+  - about.html          (About us)
+  - contact.html        (Secure contact)
+  - mirrors.html        (Mirrors and offline)
   - styles.css
-  - logo-mark.png       (the site's logo)
+  - logo-mark.png       (the site's logo, for a dark screen)
+  - logo-mark-light.png (the site's logo, for a light screen)
   - favicon.ico         (the icon on the browser tab)
   - Whatisinthezipfile.txt (this file)
 
