@@ -292,7 +292,7 @@ html:not(.js) .lang-wrap { display: none; } /* choosing a language needs scripts
 }
 .tile-navy { --fg: var(--tile-navy-fg); background: var(--tile-navy); }
 .tile-gold { --fg: var(--on-gold); background: var(--gold); }
-.tile:hover { color: var(--fg); filter: brightness(1.08); }
+.tile:hover { color: var(--fg); filter: brightness(.92); } /* darker, never lighter: white on the dark-mode teal stays above 4.5:1 */
 .tile .draw { width: 60px; height: 60px; }
 .tile-title { flex: 1; font-family: var(--f-head); font-size: 26px; font-weight: 700; line-height: 1.2; }
 
@@ -301,6 +301,9 @@ html:not(.js) .lang-wrap { display: none; } /* choosing a language needs scripts
 .section-block.first { padding-top: 20px; }
 .section-block.lead { padding-top: 36px; }
 .section-block > * { max-width: var(--read); }
+/* Reading lines of 65 to 75 characters on desktop: about 31em is 70 characters
+   of the device's own font, whatever the size of the words. */
+.inner p, .inner li, .inner blockquote { max-width: 31em; }
 .section-heading, .section-block h2 { font-size: 28px; }
 .section-intro { font-size: 18px; line-height: 1.55; }
 .section-intro.small { font-size: 16px; }
@@ -383,7 +386,7 @@ html:not(.js) .lang-wrap { display: none; } /* choosing a language needs scripts
   background: var(--gold); color: var(--on-gold); text-decoration: none;
 }
 .section-block > .tile-big { max-width: calc(var(--read) + 16px); }
-.tile-big:hover { color: var(--on-gold); filter: brightness(1.06); }
+.tile-big:hover { color: var(--on-gold); filter: brightness(.92); }
 .tile-big-head { display: flex; align-items: center; gap: 14px; }
 .tile-big .draw { width: 52px; height: 52px; }
 .tile-big-title { flex: 1; font-family: var(--f-head); font-size: 23px; font-weight: 700; line-height: 1.2; }
