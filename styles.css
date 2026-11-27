@@ -577,6 +577,11 @@ code { font-family: var(--f-mono); font-size: 16px; background: var(--tint); pad
     box-shadow: none !important; text-shadow: none !important; filter: none !important;
   }
   body { font-size: 11.5pt; line-height: 1.5; }
+  .inner p, .inner li, .inner blockquote, .section-intro, .hero-lead, .page-kicker,
+  .band, .tile-big-note, .ref, .footer-text, .footer-note {
+    font-size: 11.5pt !important; max-width: none !important;
+  }
+  .section-block { gap: 8pt; }
   .site-header, .skip-link, .tiles, .hero-actions, .cta-buttons, .btn, .btn-ghost,
   .family-strip, .footer-links, .pray-actions, .next-step, .draw, .icon-chip { display: none !important; }
   .opening::after, .pathway::before { display: none !important; }
